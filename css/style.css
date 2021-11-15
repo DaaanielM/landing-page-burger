@@ -12,9 +12,9 @@ body{
     background: url('https://images2.alphacoders.com/474/thumb-1920-474157.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    height: 100vh;
-    overflow-x:hidden;
-    overflow-y:hidden;
+    height: 100%;
+    /* overflow-x:hidden;
+    overflow-y:hidden; */
 }
 
 /* CONTENT NAVBAR */
@@ -85,7 +85,7 @@ body{
 .btn__menu {
 	color: aliceblue;
 	margin-right: 1rem;
-	font-size: 1.8em;
+	font-size: 1.7em;
 	color: #fff;
 	cursor: pointer;
 	display: none;
@@ -96,10 +96,18 @@ body{
 }
 
 @media screen and (max-width: 768px) {
+    .logo__menu img {
+        width: 2.2rem;
+        vertical-align: middle;
+        animation: moverIzquierda 1s ease-in;
+    }
 	.main-menu {
 		width: 85%;
 		height: 70px;
 	}
+    .btn__menu{
+        font-size: 1.5em;
+    }
 
 	.btn__menu {
 		display: inline-flex;
@@ -192,7 +200,7 @@ body{
     .top__text span{
         font-family: 'Anton', 'sans-serif';
         color: #FFD900;
-        font-size: 5em;
+        font-size: 4em;
         text-transform: uppercase;
         letter-spacing: 0.1rem;
         text-shadow:  3px 8px 8px #ffd90077;
@@ -206,7 +214,14 @@ body{
         max-width: 100%;
         display: block;
         margin: auto;
-        width: 28em; 
+        width: 23em; 
+
+    }
+    .section-right img{
+        display: block;
+        margin: auto;
+        max-width: 100%; 
+
     }
 }
 
@@ -245,7 +260,7 @@ body{
     .top__text span{
         font-family: 'Anton', 'sans-serif';
         color: #FFD900;
-        font-size: 3em;
+        font-size: 2.8em;
         text-transform: uppercase;
         letter-spacing: 0.1rem;
         text-shadow:  5px 8px 8px #ffd90077;
@@ -259,8 +274,13 @@ body{
         max-width: 100%;
         display: block;
         margin: auto;
-        width: 15em; 
+        width: 17em; 
     }
+
+   .offert-text p{
+        font-size: 0.9em !important;
+   }
+
 }
 
 
@@ -271,7 +291,7 @@ body{
     height: auto;
 }
 .section-right{
-    width: 75%;
+    width:  80%;
     max-width: 80%;
     height: auto;
     margin: auto;
@@ -282,14 +302,14 @@ body{
 }
 
 .section-right img{
-    width: 20em;
-    display: inline-block;
+    max-width: 25em;
+    display: block;
     animation: moverDerecha 1.1s ease-in;
 
 }
 
 .section-left{
-    width: 75%;
+    width: 65%;
     height: auto;
     margin: auto;
     display: flex;
@@ -298,12 +318,9 @@ body{
     align-items: center;
     padding-top:2rem;
     animation: moverIzquierda 1.1s ease-in;
-
 }
 
-.offer-text{
-    width: 60%;
-}
+
 
 .offert-text p{
     font-family: 'Poppins', 'sans-serif';
@@ -331,7 +348,6 @@ body{
     margin: auto;
     display: flex;
     flex-flow: column wrap;
-    
 }
 
 .offert-input input{
@@ -492,9 +508,7 @@ body{
     width: 23em;
     display: block;
 }
-.landing{
-    padding-top: 2em;
-}
+
 
 }
 
@@ -558,7 +572,10 @@ body{
     display: inline-block;
 }
 .landing{
+    
     padding-bottom: 2em;
+    width: 100%;
+
 }
 
 }
@@ -569,12 +586,24 @@ body{
     }
 }
 
+/* WEAVER */
+
+.landing{
+    width:  100%;  
+    
+}
+.landing img{
+    
+    display: block;
+    width: 100%;
+}
+
 
 /* FOOTER */
 .main-footer{
     width: 100%;
-    height: 6em;;
-    position: absolute;
+    height: 90px;
+    position: relative;
     bottom: 0;
     display: flex;
     justify-content: space-around;
@@ -582,18 +611,9 @@ body{
     flex-flow: row wrap;
     font-family: 'Poppins', 'sans-serif';
     animation: arriba 1.1s ease-in;
-
-}
-.correo{
-    display: flex;
-
+    padding-bottom: 1.5em;
 }
 
-.correo img{
-    width: 2rem;
-    vertical-align: middle;
-
-}
 .correo span{
     color: #dbdbdb9d;
     margin-left: 1rem;
@@ -628,23 +648,23 @@ body{
 }
 
 
-.landing{
-    width:  100%;  
-    height: 10.4em;
-}
-.landing img{
-    display: block;
-    width: 100%;
-}
 
 @media screen and (max-width: 768px) {
   .landing img{
     display: none;
   }
   .main-footer{
+      margin-top: 4.5em;
+      flex-flow: column;
       margin-top: 5em;
-      flex-flow: column wrap;
   }
+  .correo, .copy{
+      margin-bottom: .2em;
+  }
+  .redes{
+      margin-top: .2em;
+  }
+  
 }
 
 @media screen and (max-width: 468px) {
@@ -652,12 +672,12 @@ body{
       display: none;
     }
     .main-footer{
-        height:7em;
+        height: 100%;
         flex-flow: column wrap;
     }
     .section-right img{
         width: 18em;
-        display: inline-block;
+        display: block;
     }
   }
 
